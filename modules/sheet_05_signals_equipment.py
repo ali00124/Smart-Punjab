@@ -227,7 +227,7 @@ def render_signals_equipment():
     # HELD %
     # ==================================================
 
-    st.divider()
+    '''st.divider()
 
     col1, col2 = st.columns(2)
 
@@ -309,7 +309,7 @@ def render_signals_equipment():
     st.plotly_chart(
         fig,
         use_container_width=True
-    )
+    )'''
 
     # ==================================================
     # CONDITION DISTRIBUTION
