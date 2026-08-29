@@ -144,12 +144,8 @@ def render_pol_state():
     fig = px.bar(
         filtered_df,
         x="Category",
-        y=[
-            "Held Quantity (Litres)",
-            "Authorized / Entitlement"
-        ],
-        barmode="group",
-        title="Held vs Entitlement"
+        y="Held Quantity (Litres)",
+        title="Held Quantity by Category"
     )
 
     st.plotly_chart(
@@ -161,7 +157,7 @@ def render_pol_state():
     # CHART 2
     # ==================================================
 
-    fig = px.bar(
+    '''fig = px.bar(
         filtered_df.sort_values(
             "Balance / Deficiency",
             ascending=False
@@ -197,7 +193,7 @@ def render_pol_state():
     st.plotly_chart(
         fig,
         use_container_width=True
-    )
+    )'''
 
     # ==================================================
     # CHART 4
@@ -224,7 +220,7 @@ def render_pol_state():
     # CHART 5
     # ==================================================
 
-    fig = px.scatter(
+    '''fig = px.scatter(
         filtered_df,
         x="Authorized / Entitlement",
         y="Held Quantity (Litres)",
@@ -236,7 +232,7 @@ def render_pol_state():
     st.plotly_chart(
         fig,
         use_container_width=True
-    )
+    )'''
 
     # ==================================================
     # DETAIL TABLE
@@ -248,5 +244,6 @@ def render_pol_state():
 
         st.dataframe(
             filtered_df,
-            use_container_width=True
+            use_container_width=True,
+            hide_index=True
         )
