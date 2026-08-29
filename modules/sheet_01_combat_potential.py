@@ -232,8 +232,9 @@ def render_combat_potential():
 
     #left, right = st.columns(2)
     middle = st.columns(1)
+    col = middle[0]
 
-    with middle:
+    with col:
 
         fig = px.bar(
             combat_df,
