@@ -230,9 +230,10 @@ def render_combat_potential():
     # COMBAT CHARTS
     # ==================================================
 
-    left, right = st.columns(2)
+    #left, right = st.columns(2)
+    middle = st.columns(1)
 
-    with left:
+    with middle:
 
         fig = px.bar(
             combat_df,
