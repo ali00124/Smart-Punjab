@@ -18,17 +18,17 @@ st.set_page_config(
 )
 
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11, tab12 = st.tabs([
-    "🪖 Combat Potential",
-    "🚛 Vehicle",
-    "🔫 Weapons",
-    "🔭 Critical Equipment",
-    "📡 Signals",
-    "💣 Ammunition",
-    "⛽ POL",
-    "📋 Audit",
-    "📅 Calendar",
-    "👨‍✈️ Promotions",
-    "👔 Officers",
+    "Combat Potential",
+    "Vehicle",
+    "Weapons",
+    "Critical Equipment",
+    "Signals",
+    "Ammunition",
+    "POL",
+    "Audit",
+    "Calendar",
+    "Promotions",
+    "Officers",
     "Book1"
 ])
 

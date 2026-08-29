@@ -7,6 +7,8 @@ from utils.kpi_utils import calculate_percentage
 
 
 def render_weapons_state():
+    
+    st.title('SMART DASHBOARD')
 
     # ==================================================
     # LOAD SHEET

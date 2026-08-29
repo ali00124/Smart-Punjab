@@ -7,6 +7,8 @@ from utils.kpi_utils import calculate_percentage
 
 
 def render_vehicle_state():
+    
+    st.title('SMART DASHBOARD')
 
     sheet = load_sheet("2. Vehicle State")
 
