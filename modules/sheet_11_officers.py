@@ -68,7 +68,7 @@ def render_officers():
         "👔 Officers – Key Appointments"
     )
 
-    st.caption(title)
+    #st.caption(title)
 
     # =====================================
     # DERIVED COLUMNS
