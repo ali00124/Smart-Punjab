@@ -257,7 +257,7 @@ def render_combat_potential():
             use_container_width=True
         )
 
-    with right:
+    '''with right:
 
         fig = px.bar(
             combat_df,
@@ -275,7 +275,7 @@ def render_combat_potential():
         st.plotly_chart(
             fig,
             use_container_width=True
-        )
+        )'''
 
     # ==================================================
     # MANPOWER SECTION
