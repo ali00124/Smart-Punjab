@@ -8,7 +8,7 @@ from modules.sheet_06_ammunition import render_ammunition_state
 from modules.sheet_07_pol import render_pol_state
 from modules.sheet_08_audit_objections import render_audit_objections
 from modules.sheet_09_training_calendar import render_training_calendar
-from modules.sheet_10_promotions import render_promotions
+#from modules.sheet_10_promotions import render_promotions
 from modules.sheet_11_officers import render_officers
 from modules.book_01 import render_book1
 
@@ -17,7 +17,7 @@ st.set_page_config(
     layout="wide"
 )
 
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11, tab12 = st.tabs([
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs([
     "Combat Potential",
     "Vehicle",
     "Weapons",
@@ -58,8 +58,8 @@ with tab8:
 with tab9:
     render_training_calendar()
     
-with tab11:
+with tab10:
     render_officers()
     
-with tab12:
+with tab11:
     render_book1()
