@@ -16,8 +16,8 @@ def render_combat_potential():
 
     unit_info = str(sheet.iloc[1, 0])
 
-    st.title("🪖 Unit State – Combat Potential & Manpower Summary")
-    st.caption(unit_info)
+    st.title("SMART DASHBOARD")
+    #st.caption(unit_info)
 
     # ==================================================
     # COMBAT POTENTIAL TABLE
