@@ -231,8 +231,7 @@ def render_combat_potential():
     # ==================================================
 
     #left, right = st.columns(2)
-    middle = st.columns(1)
-    col = middle[0]
+    col, = st.columns(1)
 
     with col:
 
