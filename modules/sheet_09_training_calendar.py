@@ -295,7 +295,7 @@ def render_training_calendar():
 
     st.divider()
 
-    with st.expander(
+    '''with st.expander(
         "Detailed Training Schedule"
     ):
 
@@ -303,4 +303,12 @@ def render_training_calendar():
             filtered_df,
             use_container_width=True,
             hide_index=True
-        )
+        )'''
+        
+    st.subheader("Detailed Training Schedule")
+    
+    st.dataframe(
+        filtered_df,
+        use_container_width=True,
+        hide_index=True
+    )

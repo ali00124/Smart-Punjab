@@ -102,7 +102,8 @@ def render_book1():
     # VACANCY ANALYSIS
     # =====================================
 
-    left, right = st.columns(2)
+    #left, right = st.columns(2)
+    left, = st.columns(1)
 
     with left:
 
@@ -119,7 +120,7 @@ def render_book1():
             use_container_width=True
         )
 
-    with right:
+    '''with right:
 
         fig = px.bar(
             book1,
@@ -132,7 +133,7 @@ def render_book1():
         st.plotly_chart(
             fig,
             use_container_width=True
-        )
+        )'''
 
     # =====================================
     # QUALIFICATION DEFICIENCIES
@@ -176,7 +177,7 @@ def render_book1():
     # DISCIPLINE / EDUCATION
     # =====================================
 
-    left, right = st.columns(2)
+    '''left, right = st.columns(2)
 
     with left:
 
@@ -212,17 +213,16 @@ def render_book1():
         st.plotly_chart(
             fig,
             use_container_width=True
-        )
+        )'''
 
     # =====================================
     # DETAIL TABLE
     # =====================================
 
-    with st.expander(
-        "Detailed Promotion Data"
-    ):
-        st.dataframe(
-            book1,
-            use_container_width=True,
-            hide_index=True
-        )
+    st.subheader("Detailed Promotion Data")
+
+    st.dataframe(
+        book1,
+        use_container_width=True,
+        hide_index=True
+    )

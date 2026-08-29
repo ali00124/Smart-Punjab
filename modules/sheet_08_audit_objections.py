@@ -199,7 +199,7 @@ def render_audit_objections():
 
     st.divider()
 
-    with st.expander(
+    '''with st.expander(
         "Detailed Audit Objections"
     ):
 
@@ -207,4 +207,12 @@ def render_audit_objections():
             filtered_df,
             use_container_width=True,
             hide_index=True
-        )
+        )'''
+        
+    st.subheader("Detailed Audit Objections")
+    
+    st.dataframe(
+        filtered_df,
+        use_container_width=True,
+        hide_index=True
+    )

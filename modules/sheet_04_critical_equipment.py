@@ -344,7 +344,7 @@ def render_critical_equipment():
 
     st.divider()
 
-    with st.expander(
+    '''with st.expander(
         "Detailed Equipment Data"
     ):
 
@@ -352,4 +352,12 @@ def render_critical_equipment():
             filtered_df,
             use_container_width=True,
             hide_index=True
-        )
+        )'''
+        
+    st.subheader("Detailed Equipment Data")
+    
+    st.dataframe(
+        filtered_df,
+        use_container_width=True,
+        hide_index=True
+    )

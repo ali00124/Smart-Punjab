@@ -327,10 +327,18 @@ def render_weapons_state():
 
     st.divider()
 
-    with st.expander("Detailed Weapons Data"):
+    '''with st.expander("Detailed Weapons Data"):
 
         st.dataframe(
             filtered_df,
             use_container_width=True,
             hide_index=True
-        )
+        )'''
+        
+    st.subheader("Detailed Weapons Data")
+    
+    st.dataframe(
+        filtered_df,
+        use_container_width=True,
+        hide_index=True
+    )

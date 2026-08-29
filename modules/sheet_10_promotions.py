@@ -239,7 +239,7 @@ def render_promotions():
 
     st.divider()
 
-    with st.expander(
+    '''with st.expander(
         "Detailed Promotion Data"
     ):
 
@@ -247,4 +247,12 @@ def render_promotions():
             filtered_df,
             use_container_width=True,
             hide_index=True
-        )
+        )'''
+        
+    st.subheader("Detailed Promotion Data")
+    
+    st.dataframe(
+        filtered_df,
+        use_container_width=True,
+        hide_index=True
+    )

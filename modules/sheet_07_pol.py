@@ -240,10 +240,18 @@ def render_pol_state():
 
     st.divider()
 
-    with st.expander("Detailed POL Data"):
+    '''with st.expander("Detailed POL Data"):
 
         st.dataframe(
             filtered_df,
             use_container_width=True,
             hide_index=True
-        )
+        )'''
+        
+    st.subheader("Detailed POL Data")
+    
+    st.dataframe(
+        filtered_df,
+        use_container_width=True,
+        hide_index=True
+    )

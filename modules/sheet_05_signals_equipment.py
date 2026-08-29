@@ -346,10 +346,18 @@ def render_signals_equipment():
 
     st.divider()
 
-    with st.expander("Detailed Signals Equipment Data"):
+    '''with st.expander("Detailed Signals Equipment Data"):
 
         st.dataframe(
             filtered_df,
             use_container_width=True,
             hide_index=True
-        )
+        )'''
+        
+    st.subheader("Detailed Signals Equipment Data")
+    
+    st.dataframe(
+        filtered_df,
+        use_container_width=True,
+        hide_index=True
+    )

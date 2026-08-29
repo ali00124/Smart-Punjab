@@ -393,20 +393,36 @@ def render_combat_potential():
     # DETAILED TABLES
     # ==================================================
 
-    with st.expander(
+    '''with st.expander(
         "📊 Combat Potential Details"
     ):
         st.dataframe(
             combat_df,
             use_container_width=True,
             hide_index=True
-        )
+        )'''
+    
+    st.subheader("Combat Potential Details")
+    
+    st.dataframe(
+        combat_df,
+        use_container_width=True,
+        hide_index=True
+    )
 
-    with st.expander(
+    '''with st.expander(
         "👥 Manpower Details"
     ):
         st.dataframe(
             manpower_df,
             use_container_width=True,
             hide_index=True
-        )
+        )'''
+        
+    st.subheader("Mnapower Details")
+    
+    st.dataframe(
+        manpower_df,
+        use_container_width=True,
+        hide_index=True
+    )

@@ -436,10 +436,18 @@ def render_ammunition_state():
             use_container_width=True
         )'''
 
-    with st.expander("Heavy Weapons Ammunition Data"):
+    '''with st.expander("Heavy Weapons Ammunition Data"):
 
         st.dataframe(
             filtered_df2,
             use_container_width=True,
             hide_index=True
-        )
+        )'''
+        
+    st.subheader("Heavy Weapons Ammunition Data")
+    
+    st.dataframe(
+        filtered_df2,
+        use_container_width=True,
+        hide_index=True
+    )
