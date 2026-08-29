@@ -162,7 +162,7 @@ def render_vehicle_state():
     # COMPARISON
     # ==========================
 
-    comparison = pd.DataFrame({
+    '''comparison = pd.DataFrame({
         "Category": [
             "Tracked / Armoured",
             "Soft-Skin"
@@ -203,7 +203,7 @@ def render_vehicle_state():
             text_auto=True
         )
 
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True)'''
 
     # ==========================
     # A VEHICLES
