@@ -342,7 +342,7 @@ def render_vehicle_state():
             use_container_width=True
         )
 
-    left, right = st.columns(2)
+    '''left, right = st.columns(2)
 
     with left:
 
@@ -370,7 +370,7 @@ def render_vehicle_state():
                 text_auto=True
             ),
             use_container_width=True
-        )
+        )'''
 
     with st.expander("Detailed Data"):
         st.dataframe(filtered_b, use_container_width=True)
