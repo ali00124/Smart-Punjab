@@ -225,7 +225,7 @@ def render_critical_equipment():
     # HELD %
     # ==================================================
 
-    st.divider()
+    '''st.divider()
 
     col1, col2 = st.columns(2)
 
@@ -336,7 +336,7 @@ def render_critical_equipment():
     st.plotly_chart(
         fig,
         use_container_width=True
-    )
+    )'''
 
     # ==================================================
     # DATA TABLE
