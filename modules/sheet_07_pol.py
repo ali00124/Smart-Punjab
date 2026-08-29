@@ -25,7 +25,7 @@ def render_pol_state():
     df.columns = headers
     df = clean_column_names(df)
     
-    st.write("Headers found:")
+    #st.write("Headers found:")
 
     summary = sheet.iloc[7]
 
