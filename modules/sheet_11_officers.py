@@ -127,17 +127,17 @@ def render_officers():
         ]
     )
 
-    c1, c2, c3, c4 = st.columns(4)
+    c1, c3, c4 = st.columns(4)
 
     c1.metric(
         "Total Officers",
         total_officers
     )
 
-    c2.metric(
+    '''c2.metric(
         "Avg Duration",
         f"{avg_duration} Months"
-    )
+    )'''
 
     c3.metric(
         "Coy Commanders",
@@ -155,9 +155,10 @@ def render_officers():
     # CHARTS
     # =====================================
 
-    col1, col2 = st.columns(2)
-
-    with col1:
+    #col1, col2 = st.columns(2)
+    col2, = st.columns(1)
+    
+    '''with col1:
 
         fig = px.pie(
             filtered_df,
@@ -168,7 +169,7 @@ def render_officers():
         st.plotly_chart(
             fig,
             use_container_width=True
-        )
+        )'''
 
     with col2:
 
@@ -184,7 +185,7 @@ def render_officers():
             use_container_width=True
         )
 
-    st.divider()
+    '''st.divider()
 
     fig = px.bar(
         filtered_df.sort_values(
@@ -199,7 +200,7 @@ def render_officers():
     st.plotly_chart(
         fig,
         use_container_width=True
-    )
+    )'''
 
     st.divider()
 
