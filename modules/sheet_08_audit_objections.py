@@ -149,7 +149,7 @@ def render_audit_objections():
             use_container_width=True
         )
 
-    st.divider()
+    '''st.divider()
 
     col1, col2 = st.columns(2)
 
@@ -195,7 +195,7 @@ def render_audit_objections():
     st.plotly_chart(
         fig,
         use_container_width=True
-    )
+    )'''
 
     st.divider()
 
