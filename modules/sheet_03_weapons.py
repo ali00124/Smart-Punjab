@@ -187,7 +187,8 @@ def render_weapons_state():
 
     st.divider()
 
-    col1, col2 = st.columns(2)
+    #col1, col2 = st.columns(2)
+    col1, = st.columns(1)
 
     with col1:
 
@@ -211,7 +212,7 @@ def render_weapons_state():
     # HELD %
     # ==================================================
 
-    with col2:
+    '''with col2:
 
         fig = px.bar(
             filtered_df.sort_values(
@@ -232,13 +233,13 @@ def render_weapons_state():
         st.plotly_chart(
             fig,
             use_container_width=True
-        )
+        )'''
 
     # ==================================================
     # CONDITION CLASSIFICATION
     # ==================================================
 
-    st.divider()
+    '''st.divider()
 
     col1, col2 = st.columns(2)
 
@@ -283,7 +284,7 @@ def render_weapons_state():
         st.plotly_chart(
             fig,
             use_container_width=True
-        )
+        )'''
 
     # ==================================================
     # CONDITION DISTRIBUTION
