@@ -85,7 +85,7 @@ def render_weapons_state():
 
     st.header("🔫 Weapons State")
 
-    st.caption(title)
+    #st.caption(title)
 
     # ==================================================
     # FILTER

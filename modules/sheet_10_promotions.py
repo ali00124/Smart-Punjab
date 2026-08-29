@@ -36,7 +36,7 @@ def render_promotions():
         "👨‍✈️ Promotion Timelines & Vacancy State"
     )
 
-    st.caption(title)
+    #st.caption(title)
 
     # ====================================
     # NUMERIC CLEANING

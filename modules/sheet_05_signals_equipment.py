@@ -93,7 +93,7 @@ def render_signals_equipment():
 
     st.header("📡 Signals Equipment State")
 
-    st.caption(title)
+    #st.caption(title)
 
     # ==================================================
     # FILTER

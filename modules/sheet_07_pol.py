@@ -72,7 +72,7 @@ def render_pol_state():
 
     st.header("⛽ POL State")
 
-    st.caption(title)
+    #st.caption(title)
 
     # ==================================================
     # FILTER

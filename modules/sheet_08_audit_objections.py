@@ -51,7 +51,7 @@ def render_audit_objections():
 
     st.header("📋 Remaining Audit Objections")
 
-    st.caption(title)
+    #st.caption(title)
 
     # ==========================================
     # FILTER

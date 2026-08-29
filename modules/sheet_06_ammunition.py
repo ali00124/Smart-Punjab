@@ -87,7 +87,7 @@ def render_ammunition_state():
 
     st.header("💣 Ammunition State")
 
-    st.caption(page_title)
+    #st.caption(page_title)
 
     # ==================================================
     # FILTERS

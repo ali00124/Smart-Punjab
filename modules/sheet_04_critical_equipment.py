@@ -93,7 +93,7 @@ def render_critical_equipment():
 
     st.header("🔭 Critical Equipment State")
 
-    st.caption(title)
+    #st.caption(title)
 
     # ==================================================
     # FILTER

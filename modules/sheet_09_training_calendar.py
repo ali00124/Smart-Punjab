@@ -79,7 +79,7 @@ def render_training_calendar():
         "📅 Upcoming Major Events / Training Calendar"
     )
 
-    st.caption(title)
+    #st.caption(title)
 
     # =====================================
     # DATE PROCESSING
