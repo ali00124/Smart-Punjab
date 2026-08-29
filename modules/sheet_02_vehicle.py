@@ -290,7 +290,7 @@ def render_vehicle_state():
         )
 
     with st.expander("Detailed Data"):
-        st.dataframe(filtered_a, use_container_width=True)
+        st.dataframe(filtered_a, use_container_width=True, hide_index=True)
 
     # ==========================
     # B VEHICLES
@@ -373,4 +373,4 @@ def render_vehicle_state():
         )'''
 
     with st.expander("Detailed Data"):
-        st.dataframe(filtered_b, use_container_width=True)
+        st.dataframe(filtered_b, use_container_width=True, hide_index=True)

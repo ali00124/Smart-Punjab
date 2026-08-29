@@ -331,7 +331,8 @@ def render_ammunition_state():
 
         st.dataframe(
             filtered_df1,
-            use_container_width=True
+            use_container_width=True,
+            hide_index=True
         )'''
 
     # ==================================================
@@ -439,5 +440,6 @@ def render_ammunition_state():
 
         st.dataframe(
             filtered_df2,
-            use_container_width=True
+            use_container_width=True,
+            hide_index=True
         )

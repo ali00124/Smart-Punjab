@@ -398,7 +398,8 @@ def render_combat_potential():
     ):
         st.dataframe(
             combat_df,
-            use_container_width=True
+            use_container_width=True,
+            hide_index=True
         )
 
     with st.expander(
@@ -406,5 +407,6 @@ def render_combat_potential():
     ):
         st.dataframe(
             manpower_df,
-            use_container_width=True
+            use_container_width=True,
+            hide_index=True
         )

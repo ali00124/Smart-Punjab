@@ -218,5 +218,6 @@ def render_officers():
 
     st.dataframe(
         filtered_df[display_cols],
-        use_container_width=True
+        use_container_width=True,
+            hide_index=True
     )

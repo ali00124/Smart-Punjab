@@ -350,5 +350,6 @@ def render_signals_equipment():
 
         st.dataframe(
             filtered_df,
-            use_container_width=True
+            use_container_width=True,
+            hide_index=True
         )
