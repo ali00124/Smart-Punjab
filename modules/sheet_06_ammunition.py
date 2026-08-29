@@ -254,8 +254,9 @@ def render_ammunition_state():
     cols[4].metric("First Line", f"{firstline:,.0f}")
     cols[5].metric("Reserve", f"{reserve:,.0f}")
 
-    left, right = st.columns(2)
-
+    #left, right = st.columns(2)
+    left, = st.columns(1)
+    
     with left:
 
         fig = px.bar(
@@ -271,7 +272,7 @@ def render_ammunition_state():
             use_container_width=True
         )
 
-    with right:
+    '''with right:
 
         fig = px.bar(
             filtered_df1,
@@ -287,9 +288,9 @@ def render_ammunition_state():
         st.plotly_chart(
             fig,
             use_container_width=True
-        )
+        )'''
 
-    left, right = st.columns(2)
+    '''left, right = st.columns(2)
 
     with left:
 
@@ -331,7 +332,7 @@ def render_ammunition_state():
         st.dataframe(
             filtered_df1,
             use_container_width=True
-        )
+        )'''
 
     # ==================================================
     # TABLE 2 SECTION
@@ -361,7 +362,8 @@ def render_ammunition_state():
     cols[4].metric("First Line", f"{firstline:,.0f}")
     cols[5].metric("Reserve", f"{reserve:,.0f}")
 
-    left, right = st.columns(2)
+    #left, right = st.columns(2)
+    left, = st.columns(1)
 
     with left:
 
@@ -378,7 +380,7 @@ def render_ammunition_state():
             use_container_width=True
         )
 
-    with right:
+    '''with right:
 
         fig = px.bar(
             filtered_df2,
@@ -394,9 +396,9 @@ def render_ammunition_state():
         st.plotly_chart(
             fig,
             use_container_width=True
-        )
+        )'''
 
-    left, right = st.columns(2)
+    '''left, right = st.columns(2)
 
     with left:
 
@@ -431,7 +433,7 @@ def render_ammunition_state():
         st.plotly_chart(
             fig,
             use_container_width=True
-        )
+        )'''
 
     with st.expander("Heavy Weapons Ammunition Data"):
 
