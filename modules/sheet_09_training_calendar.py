@@ -204,6 +204,15 @@ def render_training_calendar():
 
     st.divider()
 
+    # Rename the values in the "Event / Activity" column
+    filtered_df["Event / Activity"] = filtered_df["Event / Activity"].replace({
+        "Annual Range Classification (Rifle & LMG)": "RET",
+        "Company Level FTX (Day/Night)": "ITC",
+        "Battalion Level Field Exercise (Ex MECH STRIKE)": "Winter Collective Ex",
+        "Bde Cdr's Inspection (Administrative)": "ATO Insp",
+        "Retirees / ESM Interaction & Welfare Day": "Sports Gala"
+    })
+
     fig = px.timeline(
         filtered_df,
         x_start="Start Date",
@@ -219,14 +228,14 @@ def render_training_calendar():
 
     st.plotly_chart(
         fig,
-        use_container_width=True
+        use_container_width=True 
     )
 
     # =====================================
     # EVENT TYPE DISTRIBUTION
     # =====================================
 
-    col1, col2 = st.columns(2)
+    '''col1, col2 = st.columns(2)
 
     with col1:
 
@@ -278,7 +287,7 @@ def render_training_calendar():
     st.plotly_chart(
         fig,
         use_container_width=True
-    )
+    )'''
 
     # =====================================
     # DATA TABLE
