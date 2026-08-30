@@ -1,5 +1,6 @@
 import streamlit as st
 from modules.sheet_01_combat_potential import render_combat_potential
+from modules.sheet_01_b_manpower import render_manpower
 from modules.sheet_02_vehicle import render_vehicle_state
 from modules.sheet_03_weapons import render_weapons_state
 from modules.sheet_04_critical_equipment import render_critical_equipment
@@ -17,8 +18,11 @@ st.set_page_config(
     layout="wide"
 )
 
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs([
+st.title('SMART DASHBOARD')
+
+tab1a, tab1b, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs([
     "Combat Potential",
+    "Man Power",
     "Vehicle",
     "Weapons",
     "Critical Equipment",
@@ -28,11 +32,14 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs([
     "Audit",
     "Forecast Calendar",
     "Officers",
-    "SLDR Promotions"
+    "Sldr Promotions"
 ])
 
-with tab1:
+with tab1a:
     render_combat_potential()
+    
+with tab1b:
+    render_manpower()
 
 with tab2:
     render_vehicle_state()

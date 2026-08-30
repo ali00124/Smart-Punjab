@@ -85,69 +85,7 @@ def render_combat_potential():
         readiness_status = "🔴 Low Readiness"
         status_color = "red"
 
-    # ==================================================
-    # MANPOWER TABLE
-    # ==================================================
-
-    manpower_headers = [
-        str(x).strip()
-        for x in sheet.iloc[16].tolist()
-    ]
-
-    manpower_df = sheet.iloc[17:29].copy()
-
-    manpower_df.columns = manpower_headers
-
-    manpower_df = manpower_df.loc[
-        :,
-        ~pd.isna(manpower_df.columns)
-    ]
-
-    manpower_df = manpower_df.dropna(
-        axis=1,
-        how="all"
-    )
-
-    manpower_df.columns = (
-        manpower_df.columns
-        .astype(str)
-        .str.strip()
-    )
-
-    manpower_df["Strength"] = pd.to_numeric(
-        manpower_df["Strength"],
-        errors="coerce"
-    )
-
-    # ==================================================
-    # MANPOWER KPIs
-    # ==================================================
-
-    authorized = int(
-        manpower_df.loc[
-            manpower_df["Category"]
-            == "AUTHORIZED STRENGTH",
-            "Strength"
-        ].iloc[0]
-    )
-
-    held = int(
-        manpower_df.loc[
-            manpower_df["Category"]
-            == "HELD STRENGTH",
-            "Strength"
-        ].iloc[0]
-    )
-
-    available = int(
-        manpower_df.loc[
-            manpower_df["Category"]
-            == "AVAILABLE MANPOWER",
-            "Strength"
-        ].iloc[0]
-    )
-
-    deficiency = authorized - held
+    
 
     # ==================================================
     # TOP KPIs
@@ -172,10 +110,6 @@ def render_combat_potential():
         f"{75 - overall_combat_potential:.1f}%"
     )
 
-    c4.metric(
-        "Available Manpower",
-        available
-    )
 
     # ==================================================
     # GAUGE
@@ -279,117 +213,7 @@ def render_combat_potential():
             use_container_width=True
         )'''
 
-    # ==================================================
-    # MANPOWER SECTION
-    # ==================================================
-
-    st.divider()
-
-    st.subheader(
-        "👥 Manpower Strength State"
-    )
-
-    m1, m2, m3, m4 = st.columns(4)
-
-    m1.metric(
-        "Authorized",
-        authorized
-    )
-
-    m2.metric(
-        "Held",
-        held
-    )
-
-    m3.metric(
-        "Available",
-        available
-    )
-
-    m4.metric(
-        "Deficiency",
-        deficiency
-    )
-
-    # ==================================================
-    # MANPOWER COMPOSITION
-    # ==================================================
-
-    absence_df = manpower_df[
-        manpower_df["Category"].isin([
-            "On Privilege Leave (P Leave)",
-            "On Casual Leave (C Leave)",
-            "Formation Guard Duties",
-            "Out Station Guard Duties",
-            "Attachments in Various HQs",
-            "On Various Courses"
-        ])
-    ].copy()
-
-    away_strength = (
-        absence_df["Strength"]
-        .fillna(0)
-        .sum()
-    )
-
-    manpower_comp = pd.DataFrame({
-        "Category": [
-            "Available",
-            "Away",
-            "Deficiency"
-        ],
-        "Strength": [
-            available,
-            away_strength,
-            deficiency
-        ]
-    })
-
-    left, right = st.columns(2)
-
-    with left:
-
-        fig = px.pie(
-            manpower_comp,
-            names="Category",
-            values="Strength",
-            hole=0.45,
-            title="Manpower Composition"
-        )
-
-        st.plotly_chart(
-            fig,
-            use_container_width=True
-        )
-
-    with right:
-
-        personnel_df = pd.DataFrame({
-            "Stage": [
-                "Authorized",
-                "Held",
-                "Available"
-            ],
-            "Strength": [
-                authorized,
-                held,
-                available
-            ]
-        })
-
-        fig = px.bar(
-            personnel_df,
-            x="Stage",
-            y="Strength",
-            text_auto=True,
-            title="Personnel Availability"
-        )
-
-        st.plotly_chart(
-            fig,
-            use_container_width=True
-        )
-
+    
     # ==================================================
     # DETAILED TABLES
     # ==================================================
@@ -407,23 +231,6 @@ def render_combat_potential():
     
     st.dataframe(
         combat_df,
-        use_container_width=True,
-        hide_index=True
-    )
-
-    '''with st.expander(
-        "👥 Manpower Details"
-    ):
-        st.dataframe(
-            manpower_df,
-            use_container_width=True,
-            hide_index=True
-        )'''
-        
-    st.subheader("Mnapower Details")
-    
-    st.dataframe(
-        manpower_df,
         use_container_width=True,
         hide_index=True
     )
