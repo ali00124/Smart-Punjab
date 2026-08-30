@@ -276,6 +276,22 @@ def render_manpower():
         
     st.subheader("Manpower Details")
     
+    for col in ['% of Held', '% of Authorized']:
+        manpower_df.iloc[1:, manpower_df.columns.get_loc(col)] = (pd.to_numeric(manpower_df.iloc[1:][col].astype(str).str.replace(r'[%\-]', '', regex=True).str.strip(), errors='coerce') * 100).round(1)
+    
+    for col in ['% of Held', '% of Authorized']:
+        manpower_df[col] = manpower_df[col].apply(
+            lambda x: str(x) if pd.notna(x) else x
+        ).apply(
+            lambda x: x if str(x).strip().endswith('%') else f"{str(x).strip()}%"
+        )
+        
+    for col in ['% of Held', '% of Authorized']:
+        manpower_df[col] = manpower_df[col].replace('nan%', None)
+        
+    manpower_df = manpower_df[manpower_df['Category'].notna()].reset_index(drop=True)
+    
+    
     st.dataframe(
         manpower_df,
         use_container_width=True,
