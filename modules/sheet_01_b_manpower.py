@@ -71,10 +71,11 @@ def render_manpower():
         sheet.iloc[12, 5]
     )
 
-    c4 = st.columns(1)
+    st.divider()
     
+    c1, = st.columns(1)
     
-    c4.metric(
+    c1.metric(
         "Available Manpower",
         available
     )
