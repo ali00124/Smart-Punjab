@@ -85,7 +85,7 @@ def render_ammunition_state():
     # PAGE HEADER
     # ==================================================
 
-    st.header("💣 Ammunition State")
+    st.header("Ammunition State")
 
     #st.caption(page_title)
 

@@ -64,9 +64,7 @@ def render_officers():
 
     df = clean_column_names(df)
 
-    st.header(
-        "👔 Officers – Key Appointments"
-    )
+    st.header("Officers – Key Appointments")
 
     #st.caption(title)
 

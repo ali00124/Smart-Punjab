@@ -49,7 +49,7 @@ def render_audit_objections():
     # HEADER
     # ==========================================
 
-    st.header("📋 Remaining Audit Objections")
+    st.header("Remaining Audit Objections")
 
     #st.caption(title)
 

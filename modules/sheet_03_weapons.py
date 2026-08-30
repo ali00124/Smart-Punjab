@@ -83,7 +83,7 @@ def render_weapons_state():
     # PAGE TITLE
     # ==================================================
 
-    st.header("🔫 Weapons State")
+    st.header("Weapons State")
 
     #st.caption(title)
 

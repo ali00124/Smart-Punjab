@@ -32,9 +32,7 @@ def render_promotions():
 
     df = clean_column_names(df)
 
-    st.header(
-        "👨‍✈️ Promotion Timelines & Vacancy State"
-    )
+    st.header("Promotion Timelines & Vacancy State")
 
     #st.caption(title)
 

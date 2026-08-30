@@ -16,7 +16,7 @@ def render_manpower():
 
     st.title("SMART DASHBOARD")
     st.header(
-            "👥 Manpower Strength State"
+            "Manpower Strength State"
         )
 
     # ==================================================

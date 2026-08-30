@@ -15,7 +15,7 @@ def render_combat_potential():
     # ==================================================
 
     st.title("SMART DASHBOARD")
-    st.header("📊 Combat Potential")
+    st.header("Combat Potential")
 
     # ==================================================
     # COMBAT POTENTIAL TABLE

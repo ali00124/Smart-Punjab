@@ -1,4 +1,7 @@
 import streamlit as st
+from PIL import Image
+import base64
+import io
 from modules.sheet_01_combat_potential import render_combat_potential
 from modules.sheet_01_b_manpower import render_manpower
 from modules.sheet_02_vehicle import render_vehicle_state
@@ -16,6 +19,30 @@ from modules.book_01 import render_book1
 st.set_page_config(
     page_title="Formation Dashboard",
     layout="wide"
+)
+
+logo = Image.open("logo.jpg")
+buffer = io.BytesIO()
+logo.save(buffer, format="JPEG") # Use "PNG" if your file is .png
+img_base64 = base64.b64encode(buffer.getvalue()).decode()
+
+# 2. Inject CSS and the HTML image
+st.markdown(
+    f"""
+    <style>
+        .logo-container {{
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            width: 100%;
+            margin-bottom: 10px;
+        }}
+    </style>
+
+    <div class="logo-container">
+        <img src="data:image/jpeg;base64,{img_base64}" width="150">
+    </div>
+    """, 
+    unsafe_allow_html=True
 )
 
 st.markdown("""

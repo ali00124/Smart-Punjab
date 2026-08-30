@@ -70,7 +70,7 @@ def render_pol_state():
     # HEADER
     # ==================================================
 
-    st.header("⛽ POL State")
+    st.header("POL State")
 
     #st.caption(title)
 

@@ -75,9 +75,7 @@ def render_training_calendar():
 
     df = clean_column_names(df)
 
-    st.header(
-        "📅 Upcoming Major Events / Training Calendar"
-    )
+    st.header("Upcoming Major Events / Training Calendar")
 
     #st.caption(title)
 

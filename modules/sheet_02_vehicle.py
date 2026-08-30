@@ -73,7 +73,7 @@ def render_vehicle_state():
     df_a = clean_df(df_a)
     df_b = clean_df(df_b)
 
-    st.header("🚛 Vehicle State")
+    st.header("Vehicle State")
 
     # ==========================
     # OVERALL KPIs

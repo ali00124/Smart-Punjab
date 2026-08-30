@@ -91,7 +91,7 @@ def render_signals_equipment():
     # PAGE HEADER
     # ==================================================
 
-    st.header("📡 Signals Equipment State")
+    st.header("Signals Equipment State")
 
     #st.caption(title)
 

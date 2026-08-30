@@ -72,7 +72,7 @@ def render_book1():
         * 100
     )
 
-    st.title("🎖️ Promotions")
+    st.title("Promotions")
 
     k1, k2, k3, k4 = st.columns(4)
 

@@ -91,7 +91,7 @@ def render_critical_equipment():
     # TITLE
     # ==================================================
 
-    st.header("🔭 Critical Equipment State")
+    st.header("Critical Equipment State")
 
     #st.caption(title)
 
