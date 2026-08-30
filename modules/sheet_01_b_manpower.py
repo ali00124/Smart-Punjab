@@ -76,8 +76,6 @@ def render_manpower():
             "Strength"
         ].iloc[0]
     )
-
-    st.divider()
     
     c1, = st.columns(1)
     

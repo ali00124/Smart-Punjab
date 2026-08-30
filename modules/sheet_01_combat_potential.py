@@ -90,8 +90,6 @@ def render_combat_potential():
     # TOP KPIs
     # ==================================================
 
-    st.divider()
-
     c1, c2, c3 = st.columns(3)
 
     c1.metric(
