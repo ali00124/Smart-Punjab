@@ -5,7 +5,7 @@ import plotly.express as px
 
 def render_book1():
     
-    st.title('SMART DASHBOARD')
+    
 
     # =====================================
     # LOAD EXCEL

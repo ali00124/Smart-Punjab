@@ -7,7 +7,7 @@ from utils.excel_loader import load_sheet, clean_column_names
 
 def render_audit_objections():
     
-    st.title('SMART DASHBOARD')
+    
 
     # ==========================================
     # LOAD SHEET

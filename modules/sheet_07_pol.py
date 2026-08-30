@@ -8,7 +8,7 @@ from utils.kpi_utils import calculate_percentage
 
 def render_pol_state():
     
-    st.title('SMART DASHBOARD')
+    
 
     # ==================================================
     # LOAD SHEET

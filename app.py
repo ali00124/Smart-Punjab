@@ -18,6 +18,14 @@ st.set_page_config(
     layout="wide"
 )
 
+st.markdown("""
+    <style>
+    .stApp h1 {
+        text-align: center;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 st.title('SMART DASHBOARD')
 
 tab1a, tab1b, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs([

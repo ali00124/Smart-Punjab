@@ -46,7 +46,7 @@ def officer_category(appt):
 
 def render_officers():
     
-    st.title('SMART DASHBOARD')
+    
 
     sheet = load_sheet(
         "11. Officers Appointments"

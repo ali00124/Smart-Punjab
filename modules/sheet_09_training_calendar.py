@@ -57,7 +57,7 @@ def parse_dates(date_str):
 
 def render_training_calendar():
     
-    st.title('SMART DASHBOARD')
+    
 
     sheet = load_sheet(
         "9. Upcoming Events"

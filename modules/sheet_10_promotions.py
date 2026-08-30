@@ -10,7 +10,7 @@ from utils.excel_loader import (
 
 def render_promotions():
     
-    st.title('SMART DASHBOARD')
+    
 
     # ====================================
     # LOAD SHEET
