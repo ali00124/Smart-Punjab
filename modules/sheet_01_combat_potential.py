@@ -14,7 +14,6 @@ def render_combat_potential():
     # HEADER
     # ==================================================
 
-    st.title("SMART DASHBOARD")
     st.header("Combat Potential")
 
     # ==================================================
