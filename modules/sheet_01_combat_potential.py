@@ -93,7 +93,7 @@ def render_combat_potential():
 
     st.divider()
 
-    c1, c2, c3, c4 = st.columns(4)
+    c1, c2, c3 = st.columns(3)
 
     c1.metric(
         "Combat Potential",
@@ -109,7 +109,6 @@ def render_combat_potential():
         "Gap",
         f"{75 - overall_combat_potential:.1f}%"
     )
-
 
     # ==================================================
     # GAUGE

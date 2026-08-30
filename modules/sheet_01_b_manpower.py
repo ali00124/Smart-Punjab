@@ -20,20 +20,37 @@ def render_manpower():
         )
 
     # ==================================================
-    # COMBAT POTENTIAL TABLE
+    # MANPOWER TABLE
     # ==================================================
 
-    combat_headers = [
+    manpower_headers = [
         str(x).strip()
-        for x in sheet.iloc[4].tolist()
+        for x in sheet.iloc[16].tolist()
     ]
 
-    combat_df = sheet.iloc[5:12].copy()
-    combat_df.columns = combat_headers
+    manpower_df = sheet.iloc[17:29].copy()
 
-    combat_df = combat_df.dropna(
+    manpower_df.columns = manpower_headers
+
+    manpower_df = manpower_df.loc[
+        :,
+        ~pd.isna(manpower_df.columns)
+    ]
+
+    manpower_df = manpower_df.dropna(
         axis=1,
         how="all"
+    )
+
+    manpower_df.columns = (
+        manpower_df.columns
+        .astype(str)
+        .str.strip()
+    )
+
+    manpower_df["Strength"] = pd.to_numeric(
+        manpower_df["Strength"],
+        errors="coerce"
     )
 
     def pct_to_float(value):
@@ -52,23 +69,13 @@ def render_manpower():
             .strip()
         )
 
-    combat_df["Availability %"] = (
-        combat_df["Availability %"]
-        .apply(pct_to_float)
-    )
-
-    combat_df["Weightage"] = (
-        combat_df["Weightage"]
-        .apply(pct_to_float)
-    )
-
-    combat_df["Weighted Score"] = (
-        combat_df["Weighted Score"]
-        .apply(pct_to_float)
-    )
-
-    overall_combat_potential = pct_to_float(
-        sheet.iloc[12, 5]
+    
+    available = int(
+        manpower_df.loc[
+            manpower_df["Category"]
+            == "AVAILABLE MANPOWER",
+            "Strength"
+        ].iloc[0]
     )
 
     st.divider()
@@ -267,7 +274,7 @@ def render_manpower():
             hide_index=True
         )'''
         
-    st.subheader("Mnapower Details")
+    st.subheader("Manpower Details")
     
     st.dataframe(
         manpower_df,
